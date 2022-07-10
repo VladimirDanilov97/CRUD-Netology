@@ -102,5 +102,20 @@ Content-Type: application/json
 ###
 
 # поиск складов, где есть определенный продукт
-GET {{baseUrl}}/stocks/?products=2
+GET {{baseUrl}}/stocks/?products=3
+Content-Type: application/json
+
+###
+
+# создание склада
+patch {{baseUrl}}/stocks/2/
+Content-Type: application/json
+
+{
+  "address": "Склад помидоров"
+}
+
+###
+# поиск складов, где есть определенный продукт
+GET {{baseUrl}}/stocks/?search=апель
 Content-Type: application/json
